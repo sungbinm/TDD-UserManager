@@ -22,10 +22,10 @@ class UserManager:
   def get_user(self, user_id) :
       if user_id not in self.users:
         raise UserNotFoundError("User ID {user_id} not found. ")
-      return self.user[user_id]
+      return self.users[user_id]
     
   # 유저 삭제
-  def remove_uesr(self, user_id):
+  def remove_user(self, user_id):
     if user_id not in self.users:
       raise UserNotFoundError("User ID {user_id} not found. ")
     

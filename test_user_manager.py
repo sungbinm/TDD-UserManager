@@ -24,7 +24,7 @@ class TestUserManager(unittest.TestCase):
   def test_add_user_duplicate_email(self):
     self.manager.add_user(1, "sungbinm", "sungbinm@naver.com")
     with self.assertRaises(EmailAlreadyExistsError) :
-      self.manager(2, "suhyeon", "sungbinm@naver.com")
+      self.manager.add_user(2, "suhyeon", "sungbinm@naver.com")
     
   # 유저삭제 정상적으로 동작하는지 테스트  
   def test_remove_user_success(self) :
